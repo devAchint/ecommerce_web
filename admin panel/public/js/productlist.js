@@ -16,6 +16,7 @@ function fetchProducts() {
                 <p>${productdata.category}</p>
                 <p>Bestseller: ${productdata.bestseller}</p>
                 <p>Featured: ${productdata.featured}</p>
+                <p>price:${productdata.price}</p>
                 <button class="deleteBtn">Delete</button>
             `;
             productscontainer.appendChild(productdiv);

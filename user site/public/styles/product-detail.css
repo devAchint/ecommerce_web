@@ -1,0 +1,33 @@
+.product-container{
+    display: flex;
+    height: calc(100vh - 60px);
+    background-color: white;
+}
+
+.product-image{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+.product-image img{
+   width: 300px;
+   height: auto;
+}
+
+.product-details{
+    width: 60%;
+    padding: 20px;
+}
+.product-details h2{
+    font-weight: 200;
+    font-size: large;
+    margin-bottom: 20px;
+}
+.product-details h3{
+    font-size: large;
+    margin-bottom: 20px;
+    color: black;
+}
+

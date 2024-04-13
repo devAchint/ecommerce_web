@@ -18,7 +18,7 @@ fetchCategories();
 
 
 
-function uploadData(name, image, category,bestseller,featured) {
+function uploadData(name, image, category,bestseller,featured,price) {
     const dbRef = firebase.database().ref("products");
 
     dbRef.push({
@@ -26,7 +26,8 @@ function uploadData(name, image, category,bestseller,featured) {
         image: image,
         category: category,
         bestseller:bestseller,
-        featured:featured
+        featured:featured,
+        price:price
     }).then(() => {
         alert("Data uploaded successfully!");
     }).catch((error) => {
@@ -40,11 +41,12 @@ function uploadProduct() {
     var productcategory = document.getElementById("productcategory").value;
     var bestseller = document.getElementById("bestseller").value;
     var featured = document.getElementById("featured").value;
+    var price = document.getElementById("price").value;
 
-    if (productname === '' || productimage === '' || productcategory === '') {
+    if (productname === '' || productimage === '' || productcategory === ''||price==='') {
         alert('Input is blank!');
     } else {
-        uploadData(productname, productimage, productcategory,bestseller,featured);
+        uploadData(productname, productimage, productcategory,bestseller,featured,price);
     }
 }
 

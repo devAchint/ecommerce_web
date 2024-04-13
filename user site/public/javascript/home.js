@@ -33,6 +33,7 @@ function fetchBestSellers() {
                 productdiv.innerHTML = `
                   <img src="${productdata.image}"></img>
                   <p>${productdata.name}</p>
+                  <p class="price">₹${productdata.price}</p>
                 `;
                 bestsellercontainer.appendChild(productdiv);
               }
@@ -54,6 +55,7 @@ function fetchFeatured() {
                 productdiv.innerHTML = `
                   <img src="${productdata.image}"></img>
                   <p>${productdata.name}</p>
+                  <p class="price">₹${productdata.price}</p>
                 `;
                 featuredcontainer.appendChild(productdiv);
               }

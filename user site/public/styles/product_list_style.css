@@ -8,11 +8,16 @@
 
 .product {
   padding: 15px;
-  text-align: center;
+  cursor: pointer;
 }
 
 .product img {
   max-width: 100%;
   height: 150px;
   border-radius: 10px;
+}
+
+.price{
+  color: deepskyblue;
+  font-size: large;
 }

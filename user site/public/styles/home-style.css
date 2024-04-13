@@ -45,6 +45,11 @@
   border-radius: 8px;
 }
 
+.price{
+  color: deepskyblue;
+  font-size: large;
+}
+
 .bankoffers {
   padding-left: 10px;
   padding-top: 10px;

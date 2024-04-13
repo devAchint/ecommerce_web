@@ -65,7 +65,7 @@ label {
 }
 
 input[type="text"],
-input[type="email"],select {
+input[type="email"],input[type="number"],select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
