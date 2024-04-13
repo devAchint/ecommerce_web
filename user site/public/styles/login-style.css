@@ -1,79 +1,75 @@
 * {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    border: border-box;
     padding: 0;
-    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    background-color: black;
 }
 
-.container {
-    align-items: start;
-    flex-direction: column;
-    width: 400px;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 10px;
+.login-form {
+    text-align: center;
+    min-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formcontainer {
     text-align: center;
 }
 
-h1 {
-    color: white;
-    font-weight: lighter;
+.form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
     display: block;
-    color: white;
+    margin-bottom: 5px;
+    font-weight: bold;
+    align-self: self-start;
 }
 
-input {
-    width: 300px;
-    border: none;
-    padding: 8px;
-    font-size: 18px;
-    color: white;
-    background-color: rgba(128, 128, 128, 0.372);
-    border-radius: 10px;
-    outline: none;
+input[type="password"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.form-group {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+textarea {
+    height: 100px;
 }
 
 button {
-    margin-top: 10px;
-    width: 300px;
-    background-color: deepskyblue;
-    font-size: 18px;
-    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    padding: 8px;
-}
-
-.logintext {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-p {
-    color: aliceblue;
-}
-
-.signup {
-    margin-left: 5px;
-    color: deepskyblue;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }

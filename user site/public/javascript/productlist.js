@@ -7,6 +7,7 @@ function getQueryParam(param) {
 const category = getQueryParam('category');
 
 function fetchProducts() {
+    showLoading();
     const productscontainer = document.getElementById("products");
     const dbRef = firebase.database().ref("products");
     dbRef.once('value').then((snapshot) => {
@@ -26,6 +27,7 @@ function fetchProducts() {
                 }
             }
         });
+        hideLoading();
     }).catch((error) => {
         alert(error);
     });
@@ -38,3 +40,10 @@ function openProductDetail(productkey) {
 
 fetchProducts();
 
+function showLoading(){
+    document.getElementById("loading").style.display='block';
+}
+
+function hideLoading(){
+    document.getElementById("loading").style.display='none';
+}

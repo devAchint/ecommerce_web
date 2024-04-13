@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../styles/home-style.css" />
     <link
       rel="stylesheet"
@@ -22,7 +22,7 @@
         </div>
         <div class="nav_pages">
           <ul class="header_list">
-            <li>Home</li>
+            <li><a href="homepage.html">Home</a></li>
             <li>Contact us</li>
             <li><a href="about.html">About us</a></li>
           </ul>
@@ -31,7 +31,7 @@
           <ul class="header_list">
             <li><i class="fa-solid fa-magnifying-glass"></i></li>
             <li><i class="fa-solid fa-cart-shopping"></i></li>
-            <li onclick="navigateToLogin()">
+            <li id="profile">
               <i class="fa-solid fa-user"></i>
             </li>
           </ul>
@@ -47,24 +47,16 @@
     </div>
 
     <!-- featured container start -->
-    <div id="featured" class="featured_container">
-      
-    </div>
+    <div id="featured" class="featured_container"></div>
     <!-- featured container end -->
 
     <!-- categories container start -->
-    <div id="categoriesContainer" class="categories_container">
-  
-    </div>
+    <div id="categoriesContainer" class="categories_container"></div>
     <!-- categories container end -->
 
     <!-- bestseller container start -->
-    <div id="bestseller" class="bestseller_container">
-      
-    </div>
+    <div id="bestseller" class="bestseller_container"></div>
     <!-- bestseller container end -->
-
-
 
     <div class="bankoffers">
       <h2>Bank Offers</h2>
@@ -76,7 +68,6 @@
       </div>
     </div>
 
-    
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
     <script src="../javascript/firebase.js"></script>
     <script src="../main.js"></script>

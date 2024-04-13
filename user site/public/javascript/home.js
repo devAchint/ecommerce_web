@@ -36,7 +36,7 @@ function fetchBestSellers() {
                   <p class="price">₹${productdata.price}</p>
                 `;
                 bestsellercontainer.appendChild(productdiv);
-              }
+            }
         });
     }).catch((error) => {
         console.error("Error fetching products:", error);
@@ -58,7 +58,7 @@ function fetchFeatured() {
                   <p class="price">₹${productdata.price}</p>
                 `;
                 featuredcontainer.appendChild(productdiv);
-              }
+            }
         });
     }).catch((error) => {
         console.error("Error fetching products:", error);
@@ -73,3 +73,17 @@ function openProductPage(category) {
 fetchFeatured();
 fetchBestSellers();
 fetchCategories();
+
+function goToProfile(){
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    
+    if (isLoggedIn) {
+       
+       alert('User is logged in');
+    } else {
+    
+       alert('User is not logged in');
+    }
+}
+
+document.getElementById("profile").onclick = goToProfile;

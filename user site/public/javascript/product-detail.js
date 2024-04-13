@@ -7,6 +7,7 @@ function getQueryParam(param) {
 const productkey = getQueryParam('productkey');
 
 function fetchProduct(key) {
+    showLoading();
     const dbRef = firebase.database().ref('products/' + key);
 
     dbRef.once('value').then((snapshot) => {
@@ -30,6 +31,15 @@ function setProduct(data) {
     img.src = data.image;
     title.innerText = data.name;
     price.innerText=data.price;
+    hideLoading();
+}
+
+function showLoading(){
+    document.getElementById("loading").style.display='block';
+}
+
+function hideLoading(){
+    document.getElementById("loading").style.display='none';
 }
 
 fetchProduct(productkey);
