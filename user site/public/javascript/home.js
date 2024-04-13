@@ -74,15 +74,13 @@ fetchFeatured();
 fetchBestSellers();
 fetchCategories();
 
-function goToProfile(){
+function goToProfile() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
-    
+
     if (isLoggedIn) {
-       
-       alert('User is logged in');
+        window.location.href = 'profile.html';
     } else {
-    
-       alert('User is not logged in');
+        window.location.href = 'login.html';
     }
 }
 
