@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../styles/home-style.css" />
     <link
       rel="stylesheet"
@@ -23,7 +24,7 @@
           <ul class="header_list">
             <li>Home</li>
             <li>Contact us</li>
-            <li onclick="navigateToAboutUs()">About</li>
+            <li><a href="about.html">About us</a></li>
           </ul>
         </div>
         <div class="nav_account">
@@ -45,10 +46,26 @@
       <div class="topimage"></div>
     </div>
 
-    <!-- categories container -->
-    <div id="categoriesContainer" class="categories_container">
+    <!-- featured container start -->
+    <div id="featured" class="featured_container">
       
     </div>
+    <!-- featured container end -->
+
+    <!-- categories container start -->
+    <div id="categoriesContainer" class="categories_container">
+  
+    </div>
+    <!-- categories container end -->
+
+    <!-- bestseller container start -->
+    <div id="bestseller" class="bestseller_container">
+      
+    </div>
+    <!-- bestseller container end -->
+
+
+
     <div class="bankoffers">
       <h2>Bank Offers</h2>
       <div class="bankofferlist">
@@ -59,35 +76,7 @@
       </div>
     </div>
 
-    <!-- footer  -->
-    <footer>
-      <div class="footer_links">
-        <div class="about_links">
-          <ul class="footer_list">
-            <li>Contact us</li>
-            <li>About us</li>
-          </ul>
-        </div>
-        <div class="categories">
-          <ul class="footer_list">
-            <li>Fashion</li>
-            <li>Home</li>
-            <li>Electronics</li>
-            <li>Mobiles</li>
-          </ul>
-        </div>
-        <div class="help_links">
-          <ul class="footer_list">
-            <li>Returns</li>
-            <li>FAQ</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="copyright_info">
-        <p>Copyright</p>
-      </div>
-    </footer>
+    
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
     <script src="../javascript/firebase.js"></script>
     <script src="../main.js"></script>
