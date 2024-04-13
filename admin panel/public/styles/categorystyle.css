@@ -51,7 +51,7 @@ body {
     margin-top: 20px;
 }
 
-.form-group {
+.form-group{
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -65,17 +65,12 @@ label {
 }
 
 input[type="text"],
-input[type="email"],
-textarea {
+input[type="email"],select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-}
-
-textarea {
-    height: 100px;
 }
 
 button {

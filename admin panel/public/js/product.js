@@ -1,3 +1,22 @@
+function fetchCategories() {
+    const categoriesContainer = document.getElementById("productcategory");
+    const dbRef = firebase.database().ref("product-categories");
+    dbRef.once('value').then((snapshot) => {
+      snapshot.forEach((category) => {
+        const categoryData = category.val();
+        const option = document.createElement("option");
+        option.value = categoryData.name;
+        option.textContent = categoryData.name;
+        categoriesContainer.appendChild(option);
+      });
+    }).catch((error) => {
+      console.error("Error fetching categories:", error);
+    });
+  }
+  
+fetchCategories();
+
+
 
 function uploadData(name, image, category) {
     const dbRef = firebase.database().ref("products");
