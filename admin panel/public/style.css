@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e3eb;
+}
+
+.container {
+    max-width: 400px;
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px;
+    background: #fff;
+}

@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "ecom12",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

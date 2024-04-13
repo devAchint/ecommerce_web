@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  border: border-box;
+  padding: 0;
+}
+
+body {
+  background-color: #f3eded;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar {
+  height: 60px;
+  background-color: deepskyblue;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header_list {
+  display: flex;
+  list-style-type: none;
+}
+
+.header_list li {
+  margin: 5px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.header_list li:hover {
+  color: deepskyblue;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+}
+
+.searchlogo {
+  background-image: url(/images/);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  margin: 10px;
+}
+
+.toptext {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.topimage {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/images/apple.jpg);
+  background-size: cover;
+}
+
+.categories_container {
+  margin: 10px;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 15px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in 0s;
+  z-index: 0;
+}
+
+.category:hover {
+  transform: scale(1.1);
+}
+
+.category img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.bankoffers {
+  padding-left: 10px;
+  padding-top: 10px;
+  margin: 10px;
+  background-color: white;
+  height: 300px;
+}
+
+.bankofferlist {
+  display: flex;
+  align-items: center;
+}
+
+.offer {
+  width: 25%;
+  height: 200px;
+  margin: 10px;
+  background-image: url(/images/bank_offers.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: gray;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.footer_links {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer_list {
+  list-style-type: none;
+}
+
+.footer_list li {
+  color: white;
+}
+
+.footer_list li:hover {
+  text-decoration: underline;
+}
+
+.copyright_info {
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  text-align: center;
+}

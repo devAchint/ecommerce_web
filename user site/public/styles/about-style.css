@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.herocontainer {
+  height: 100vh;
+  display: flex;
+}
+
+.herotext {
+  padding: 20px;
+  width: 50%;
+  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.herotext h1 {
+  margin: 10px;
+}
+
+.heroimage {
+  width: 50%;
+  background-color: darkblue;
+  background-image: url(/images/about-hero.webp);
+  background-size: cover;
+}
+
+/* mission */
+
+.mission {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.missionhead {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.missionhead h4 {
+  width: 500px;
+}
+
+.missionlist {
+  height: 50%;
+  display: flex;
+}
+
+.missionitem {
+  width: 25%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.missionimage {
+  width: 100px;
+  height: 100px;
+}
+
+.missiontitle{
+    margin: 10px;
+}
+
+.mission1 .missionimage{
+    background-image: url(/images/apple.jpg);
+}
+.mission2 .missionimage{
+    background-image: url(/images/apple.jpg);
+}
+.mission3 .missionimage{
+    background-image: url(/images/apple.jpg);
+}
+.mission4 .missionimage{
+    background-image: url(/images/apple.jpg);
+}
+
+footer {
+  background-color: gray;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.footer_links {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer_list {
+  list-style-type: none;
+}
+
+.footer_list li {
+  color: white;
+}
+
+.footer_list li:hover {
+  text-decoration: underline;
+}
+
+.copyright_info {
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  text-align: center;
+}
