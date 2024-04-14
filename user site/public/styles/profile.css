@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilecontainer {
+    max-width: 400px;
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px;
+    background: gray;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

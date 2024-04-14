@@ -1,3 +1,30 @@
+function fetchSliders() {
+    const sliderContainer = document.getElementById("sliders");
+    const dbRef = firebase.database().ref("sliders");
+    dbRef.once('value').then((snapshot) => {
+      snapshot.forEach((slider) => {
+        const sliderData = slider.val();
+        const sliderImg = document.createElement("img");
+        sliderImg.src = sliderData.image;
+        sliderContainer.appendChild(sliderImg);
+      });
+    }).catch((error) => {
+      console.error("Error fetching sliders:", error);
+    });
+  }
+
+fetchSliders();
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.sliders img');
+const slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+function nextSlide() {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
 function fetchCategories() {
     const categoriesContainer = document.getElementById("categoriesContainer");
 

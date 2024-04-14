@@ -33,10 +33,11 @@ function uploadUser(name, email, address) {
             email: email,
             address: address,
         })
-        .then(() => {
+        .then((userCredential) => {
             hideLoading();
             alert("Signup Successful!");
             localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('userkey',userCredential.key);
         })
         .catch((error) => {
             hideLoading();

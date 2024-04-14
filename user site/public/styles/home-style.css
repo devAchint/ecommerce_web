@@ -1,27 +1,16 @@
-.container {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
+.slidercontainer {
+  display: block;
   margin: 10px;
+  overflow: hidden;
 }
 
-.toptext {
-  width: 50%;
-  height: 100%;
+.sliders{
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
 }
 
-.topimage {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(/images/apple.jpg);
-  background-size: cover;
+.sliders img{
+  width: 100%;
 }
 
 .categories_container,.bestseller_container,.featured_container {
