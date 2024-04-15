@@ -1,42 +1,18 @@
-function showCategories() {
-    document.querySelector('.dashboard-content').classList.add('active');
-    document.querySelector('.user-content').classList.remove('active');
-    document.querySelector('.products').classList.remove('active');
+function login() {
+    var email = document.getElementById("login-email").value;
+    var password = document.getElementById("login-password").value;
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            var user = userCredential.user;
+            alert(`Welcome back, ${user.email}!`);
+            navigateToHomePage();
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert(errorMessage);
+        });
 }
 
-function showUser() {
-    document.querySelector('.dashboard-content').classList.remove('active');
-    document.querySelector('.products').classList.remove('active');
-    document.querySelector('.user-content').classList.add('active');
-}
-
-function showProducts() {
-    document.querySelector('.dashboard-content').classList.remove('active');
-    document.querySelector('.user-content').classList.remove('active');
-    document.querySelector('.user-content').classList.add('active');
-}
-
-function uploadData(category,imageurl) {
-    const dbRef = firebase.database().ref("product-categories");
-    dbRef.push({
-        name: category,
-        image: imageurl
-    }).then(() => {
-        alert("Data uploaded successfully!");
-    }).catch((error) => {
-        alert("Error uploading data:" + error);
-    });
-}
-
-function addcategory(){
-    var category=document.getElementById("categoryname").value;
-    var imageurl=document.getElementById("imageurl").value;
-    if (category === ''||imageurl==='') {
-        alert('Input is blank!');
-    } else {
-        uploadData(category,imageurl);
-    }
-
-}
-
-document.getElementById("submit").onclick = addcategory;
+document.getElementById("submit").onclick = login;
