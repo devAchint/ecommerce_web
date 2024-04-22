@@ -3,32 +3,30 @@ fetchSliders();
 fetchFeatured();
 fetchBestSellers();
 fetchCategories();
+
 function fetchSliders() {
-    const sliderContainer = document.getElementById("sliders");
+    const sliderContainer = document.getElementById("sliderContainer");
     const dbRef = firebase.database().ref("sliders");
+    let isFirstItem=true;
     dbRef.once('value').then((snapshot) => {
-        snapshot.forEach((slider) => {
-            const sliderData = slider.val();
-            const sliderImg = document.createElement("img");
-            sliderImg.src = sliderData.image;
-            sliderContainer.appendChild(sliderImg);
+        snapshot.forEach((category) => {
+            const sliderdata = category.val();
+            const sliderdiv = document.createElement("div");
+            sliderdiv.className = "carousel-item";
+            if (isFirstItem) {
+                sliderdiv.classList.add('active');
+                isFirstItem = false; 
+              }
+              
+            sliderdiv.innerHTML = `
+                <img src="${sliderdata.image}"></img>
+            `;
+            sliderContainer.appendChild(sliderdiv);
         });
     }).catch((error) => {
-        console.error("Error fetching sliders:", error);
+        console.error("Error fetching categories:", error);
     });
-}
-
-fetchSliders();
-
-let currentSlide = 0;
-const slides = document.querySelectorAll('.sliders img');
-const slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
-
-function nextSlide() {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-}
+};
 
 function fetchCategories() {
     const categoriesContainer = document.getElementById("categoriesContainer");
@@ -127,7 +125,7 @@ function showLoading() {
 }
 
 function hideLoading() {
-    let container = document.getElementById("container");
+    let container = document.getElementById("mycontainer");
     container.classList.toggle("load");
     document.getElementById("loading").style.display = 'none';
 }
