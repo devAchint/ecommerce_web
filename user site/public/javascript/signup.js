@@ -16,6 +16,7 @@ function signUp() {
                 uploadUser(name, email, address);
             })
             .catch((error) => {
+                enableButton('submit');
                 hideLoading();
                 var errorMessage = error.message;
                 alert(errorMessage);
@@ -35,11 +36,13 @@ function uploadUser(name, email, address) {
         })
         .then((userCredential) => {
             hideLoading();
+            enableButton('submit');
             alert("Signup Successful!");
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('userkey',userCredential.key);
         })
         .catch((error) => {
+            enableButton('submit');
             hideLoading();
             alert("Error uploading data:" + error);
         });
@@ -58,6 +61,15 @@ function disableButton(buttonId) {
     const button = document.getElementById(buttonId);
     if (button) {
         button.disabled = true;
+    } else {
+        console.error("Button with id '" + buttonId + "' not found.");
+    }
+}
+
+function enableButton(buttonId) {
+    const button = document.getElementById(buttonId);
+    if (button) {
+        button.disabled = false;
     } else {
         console.error("Button with id '" + buttonId + "' not found.");
     }

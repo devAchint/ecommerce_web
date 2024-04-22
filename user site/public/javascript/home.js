@@ -1,17 +1,22 @@
+showLoading();
+fetchSliders();
+fetchFeatured();
+fetchBestSellers();
+fetchCategories();
 function fetchSliders() {
     const sliderContainer = document.getElementById("sliders");
     const dbRef = firebase.database().ref("sliders");
     dbRef.once('value').then((snapshot) => {
-      snapshot.forEach((slider) => {
-        const sliderData = slider.val();
-        const sliderImg = document.createElement("img");
-        sliderImg.src = sliderData.image;
-        sliderContainer.appendChild(sliderImg);
-      });
+        snapshot.forEach((slider) => {
+            const sliderData = slider.val();
+            const sliderImg = document.createElement("img");
+            sliderImg.src = sliderData.image;
+            sliderContainer.appendChild(sliderImg);
+        });
     }).catch((error) => {
-      console.error("Error fetching sliders:", error);
+        console.error("Error fetching sliders:", error);
     });
-  }
+}
 
 fetchSliders();
 
@@ -20,9 +25,9 @@ const slides = document.querySelectorAll('.sliders img');
 const slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
 
 function nextSlide() {
-  slides[currentSlide].classList.remove('active');
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add('active');
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
 }
 
 function fetchCategories() {
@@ -87,6 +92,7 @@ function fetchFeatured() {
                 featuredcontainer.appendChild(productdiv);
             }
         });
+        hideLoading();
     }).catch((error) => {
         console.error("Error fetching products:", error);
     });
@@ -97,9 +103,6 @@ function openProductPage(category) {
     window.location.href = destinationURL;
 }
 
-fetchFeatured();
-fetchBestSellers();
-fetchCategories();
 
 function goToProfile() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -111,4 +114,20 @@ function goToProfile() {
     }
 }
 
-document.getElementById("profile").onclick = goToProfile;
+function showMenu() {
+    let submenu = document.getElementById("subMenu");
+    submenu.classList.toggle("open-menu");
+}
+
+document.getElementById("profile").onclick = showMenu;
+
+
+function showLoading() {
+    document.getElementById("loading").style.display = 'block';
+}
+
+function hideLoading() {
+    let container = document.getElementById("container");
+    container.classList.toggle("load");
+    document.getElementById("loading").style.display = 'none';
+}

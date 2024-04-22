@@ -34,39 +34,54 @@
               <i class="fa-solid fa-user"></i>
             </li>
           </ul>
+          <div class="submenu-wrap" id="subMenu">
+            <div class="submenu">
+              <div class="menu-profile">
+                <h3>Profile</h3>
+              </div>
+              <div class="menu-help">
+                <h3>Help</h3>
+              </div>
+              <div class="menu-logout">
+                <h3>Logout</h3>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
-    <!-- slider container start -->
-    <div id="slidercontainer" class="slidercontainer">
-      <div id="sliders" class="sliders"></div>
-    </div>
-
-    <!-- slider container end  -->
-
-    <!-- featured container start -->
-    <div id="featured" class="featured_container"></div>
-    <!-- featured container end -->
-
-    <!-- categories container start -->
-    <div id="categoriesContainer" class="categories_container"></div>
-    <!-- categories container end -->
-
-    <!-- bestseller container start -->
-    <div id="bestseller" class="bestseller_container"></div>
-    <!-- bestseller container end -->
-
-    <div class="bankoffers">
-      <h2>Bank Offers</h2>
-      <div class="bankofferlist">
-        <div class="offer"></div>
-        <div class="offer"></div>
-        <div class="offer"></div>
-        <div class="offer"></div>
+    <div class="container" id="container">
+      <!-- slider container start -->
+      <div id="slidercontainer" class="slidercontainer">
+        <div id="sliders" class="sliders"></div>
       </div>
+
+      <!-- slider container end  -->
+
+      <!-- featured container start -->
+      <div class="featured_container">
+        <h3 class="heading">Highlights</h3>
+        <div id="featured" class="featured"></div>
+      </div>
+      <!-- featured container end -->
+
+      <!-- categories container start -->
+      <div class="categories_container">
+        <h3 class="heading">Shop by Categories</h3>
+        <div id="categoriesContainer" class="categories"></div>
+      </div>
+      <!-- categories container end -->
+
+      <!-- bestseller container start -->
+      <div class="bestseller_container">
+        <h3 class="heading">BestSellers</h3>
+        <div id="bestseller" class="bestsellers"></div>
+      </div>
+      <!-- bestseller container end -->
     </div>
 
+    <div id="loading" class="loading"></div>
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
     <script src="../javascript/firebase.js"></script>
     <script src="../javascript/home.js"></script>
