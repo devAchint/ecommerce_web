@@ -16,10 +16,17 @@ function uploadData(image) {
 function uploadSlider() {
   var image = document.getElementById("productimage").value;
 
-  if (image === "") {
-    alert("Input is blank!");
+  const isLoggedIn = localStorage.getItem("isAdminLoggedIn");
+
+  if (isLoggedIn) {
+    if (image === "") {
+      alert("Input is blank!");
+    } else {
+      uploadData(image);
+    }
   } else {
-    uploadData(image);
+    alert("User is not logged in");
   }
 }
+
 document.getElementById("submit").onclick = uploadSlider;

@@ -24,7 +24,7 @@
   }
 }
 
-.carousel-item img{
+.carousel-item img {
   height: auto;
   width: 100%;
 }
@@ -87,6 +87,11 @@
 .product {
   padding: 15px;
   text-align: center;
+  cursor: pointer;
+}
+
+.product p {
+  text-align: start;
 }
 
 .category img,

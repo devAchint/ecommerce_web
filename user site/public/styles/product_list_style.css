@@ -35,6 +35,9 @@
   cursor: pointer;
 }
 
+.product p {
+  text-align: start;
+}
 .product img {
   max-width: 100%;
   height: 150px;

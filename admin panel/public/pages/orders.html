@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../styles/categorystyle.css" />
+    <link rel="stylesheet" href="../styles/categorylist.css">
   </head>
   <body>
     <div class="navbar">
@@ -21,23 +22,13 @@
       </div>
     </div>
 
-    <div class="formcontainer">
-      <h2>Add category</h2>
-      <div class="form">
-        <div class="form-group">
-          <label for="name">Category name:</label>
-          <input type="text" id="categoryname" name="name" />
-        </div>
-        <div class="form-group">
-          <label for="imageurl">Image:</label>
-          <input type="text" id="imageurl" name="imageurl"  />
-        </div>
-        <button id="submit">Submit</button>
-      </div>
+    <div id="orderscontainer" class="orderscontainer">
+        
     </div>
+    
 
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
     <script src="../js/firebaseconfig.js"></script>
-    <script src="../js/categoryjs.js"></script>
+    <script src="../js/categorylist.js"></script>
   </body>
 </html>

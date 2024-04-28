@@ -4,24 +4,12 @@ function login() {
 
   if (email === '' || password === '') {
     alert("Input is blank!");
-  } else if (email != "admin@gmail.com") {
-    alert("wrong user id");
+  } else if (email != "admin@gmail.com" && password!="admin2093@") {
+    alert("wrong user id and password");
   } else {
     showLoading();
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        hideLoading();
-        var user = userCredential.user;
-        window.location.href = 'pages/category.html';
-      })
-      .catch((error) => {
-        hideLoading();
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        alert(errorMessage);
-      });
+    localStorage.setItem('isAdminLoggedIn', 'true');
+    window.location.href = 'pages/category.html';
   }
 }
 

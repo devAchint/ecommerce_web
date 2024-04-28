@@ -21,8 +21,13 @@
 
 .product-container{
     display: flex;
-    height: calc(100vh - 60px);
     background-color: white;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.product-container.load{
+    max-height: calc(100vh - 60px);
 }
 
 .product-image{
@@ -39,7 +44,10 @@
 
 .product-details{
     width: 60%;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0;
 }
 .product-details h2{
     font-weight: 200;
@@ -50,5 +58,22 @@
     font-size: large;
     margin-bottom: 20px;
     color: black;
+}
+
+button {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.addtocart{
+    background: green;
 }
 

@@ -39,7 +39,8 @@
             .signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
               var user = userCredential.user;
-              alert(`Welcome back, ${user.email}!`);
+              localStorage.setItem('isLoggedIn', 'true');
+              alert("login success");
             })
             .catch((error) => {
               var errorCode = error.code;

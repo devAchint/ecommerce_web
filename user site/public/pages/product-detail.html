@@ -31,7 +31,7 @@
           <ul class="header_list">
             <li><i class="fa-solid fa-magnifying-glass"></i></li>
             <li><i class="fa-solid fa-cart-shopping"></i></li>
-            <li onclick="navigateToLogin()">
+            <li>
               <i class="fa-solid fa-user"></i>
             </li>
           </ul>
@@ -39,16 +39,32 @@
       </div>
     </header>
 
-    <div id="loading" class="loading">
-    </div>
+    <div id="loading" class="loading"></div>
 
-    <div class="product-container">
+    <div id="product-container" class="product-container">
       <div class="product-image">
         <img id="productimage" />
       </div>
       <div class="product-details">
-        <h2 id="product-title"></h2>
-        <h3 id="product-price"></h3>
+        <div class="title">
+          <h2 id="product-title"></h2>
+          <h3 id="product-price"></h3>
+        </div>
+
+        <div class="buttons">
+          <button id="addToCart" class="addtocart">Add to Cart</button>
+          <button id="buyNow" class="buynow">Buy now</button>
+        </div>
+
+        <p>
+          Lorem ipsum dolor, sit amet consect Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit. Tempore corporis quam earum placeat ex
+          ratione, praesentium nemo quas debitis at, veniam quisquam id,
+          repudiandae perspiciatis nisi. Sint quasi nihil a.etur adipisicing
+          elit. Eligendi maiores ipsum molestias ratione dolorem accusantium
+          quasi, autem doloribus nulla vitae reiciendis quas expedita earum cum
+          numquam tenetur porro, facere officia.
+        </p>
       </div>
     </div>
 
