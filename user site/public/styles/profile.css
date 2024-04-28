@@ -1,23 +1,64 @@
-body {
+.maincontainer {
     display: flex;
-    height: 100vh;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background-color: white;
+    height: 0;
+    overflow: hidden;
 }
 
-.profilecontainer {
-    max-width: 400px;
-    height: 400px;
+.maincontainer.load{
+    height: calc(100vh - 60px);
+}
+
+.profile-text{
+    margin: 20px;
+}
+
+.container{
     width: 100%;
-    border-radius: 12px;
-    padding: 10px;
-    background: gray;
+    display: flex;
+   
 }
 
-.form-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.first{
+    width: 50%;
+}
+
+.second{
+    display: grid;
+    width: 50%;
+}
+
+.card {
+    align-self: center;
+    justify-self: center;
+    background-color: lightblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    padding: 20px;
+}
+
+.user-info {
+    text-align: center;
+}
+
+.user-info h2 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.user-info p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.user-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.user-info a:hover {
+    text-decoration: underline;
 }

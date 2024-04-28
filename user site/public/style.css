@@ -128,3 +128,48 @@ a {
     transform: rotate(360deg);
   }
 }
+
+
+
+footer {
+    background-color: #34495e;
+    padding-top: 20px;
+    height: 200px;
+    display: flex;
+}
+
+footer .links {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50%;
+}
+
+footer .footer-logo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links-head {
+    color: white;
+}
+
+.footer_list {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.footer_list li {
+    color: white;
+}
+
+.footer_list li:hover {
+    text-decoration: underline;
+}
+
+.footer-logo h1{
+  color: white;
+}

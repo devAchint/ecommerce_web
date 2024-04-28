@@ -23,7 +23,7 @@ function logout() {
   firebase.auth().signOut()
     .then(function () {
       localStorage.setItem('isLoggedIn', 'false');
-      alert("logout success");
+     window.location.href = 'homepage.html';
     })
     .catch(function (error) {
       alert(error);

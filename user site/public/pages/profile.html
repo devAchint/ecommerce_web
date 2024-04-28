@@ -4,28 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
+    <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../styles/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <!-- profile container start  -->
-    <div class="profilecontainer">
-      <div class="form-group">
-          <label for="name">Name</label>
-          <p id="name">fgrdbrs</p>
+    <header>
+      <div class="mynavbar">
+        <div class="nav-logo">
+          <div class="logo">WristWorld</div>
+        </div>
+        <div class="nav_pages">
+          <ul class="header_list">
+            <li id="home" class="point">Home</li>
+            <li id="contact" class="point">Contact us</li>
+            <li id="about" class="point">About us</li>
+          </ul>
+        </div>
+        <div class="nav_account">
+          <ul class="header_list">
+            <li class="point" id="profile">
+              <i class="fa-solid fa-user"></i>
+            </li>
+          </ul>
+          <div class="submenu-wrap" id="subMenu">
+            <div class="submenu">
+              <div id="menu-profile" class="menu point">
+                <h3>Profile</h3>
+              </div>
+              <div id="menu-login" class="menu point">
+                <h3>Log in</h3>
+              </div>
+              <div id="menu-help" class="menu point">
+                <h3>Help</h3>
+              </div>
+              <div id="menu-logOut" class="menu point">
+                <h3>Logout</h3>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="name">Email</label>
-        <p id="email">fgrdbrs</p>
+    </header>
+
+    <div id="maincontainer" class="maincontainer">
+      <h1 class="profile-text">Profile</h1>
+
+      <div class="container">
+        <div class="first"></div>
+        <div class="second">
+          <div class="card">
+            <div class="user-info">
+              <h2 id="name"></h2>
+              <p>
+                Email: <a id="email" href="mailto:john@example.com">john@example.com</a>
+              </p>
+              <p id="address">
+             
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="name">Address</label>
-      <p id="address">fgrdbrs</p>
-  </div>
-    </div>
-    <!-- profile container end  -->
+    <div id="loading" class="loading"></div>
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
     <script src="../javascript/firebase.js"></script>
     <script src="../javascript/profile.js"></script>
+    <script src="../main.js"></script>
   </body>
 </html>
