@@ -4,92 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About us</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../styles/about-style.css" />
   </head>
   <body>
-    <!-- hero container -->
-    <div class="herocontainer">
-      <div class="herotext">
-        <h1>About us</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, vel
-          minima! Debitis animi perferendis atque laudantium nam est eius ab
-          numquam provident repudiandae nulla asperiores ex ullam, officia
-          reprehenderit iste.
-        </p>
+    <header>
+      <div class="mynavbar">
+        <div class="nav-logo">
+          <div class="logo">WristWorld</div>
+        </div>
+        <div class="nav_pages">
+          <ul class="header_list">
+            <li id="home" class="point">Home</li>
+            <li id="contact" class="point">Contact us</li>
+            <li id="about" class="point">About us</li>
+          </ul>
+        </div>
+        <div class="nav_account">
+          <ul class="header_list">
+            <li class="point" id="profile">
+              <i class="fa-solid fa-user"></i>
+            </li>
+          </ul>
+          <div class="submenu-wrap" id="subMenu">
+            <div class="submenu">
+              <div id="menu-profile" class="menu point">
+                <h3 >Profile</h3>
+              </div>
+              <div id="menu-login" class="menu point">
+                <h3>Log in</h3>
+              </div>
+              <div id="menu-help" class="menu point">
+                <h3 >Help</h3>
+              </div>
+              <div id="menu-logOut" class="menu point">
+                <h3>Logout</h3>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="heroimage"></div>
+    </header>
+
+    <div class="maincontainer">
+      <h1>About WristWorld</h1>
+      <p>Welcome to WristWorld, your ultimate destination for exquisite timepieces. At WristWorld, we are passionate about watches and strive to bring you the finest collection of luxury and stylish watches from around the world.</p>
+      <p>Our mission is to provide watch enthusiasts with a curated selection of high-quality timepieces, catering to every style and occasion. Whether you're looking for a classic dress watch, a rugged sports watch, or a sophisticated chronograph, WristWorld has something for everyone.</p>
+      <p>With our commitment to exceptional customer service and a seamless online shopping experience, we aim to make your watch-buying journey enjoyable and effortless. Explore our collection today and find the perfect watch to complement your lifestyle.</p>
     </div>
 
-    <!-- mission -->
-    <div class="mission">
-      <div class="missionhead">
-        <h1>Our mission</h1>
-        <h4>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
-          repellat architecto reiciendis.
-        </h4>
-      </div>
-      <div class="missionlist">
-        <div class="mission1 missionitem">
-          <div class="missionimage"></div>
-          <h4 class="missiontitle">Mission 1</h4>
-          <p class="missiondescription">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit
-          </p>
-        </div>
-        <div class="mission2 missionitem">
-          <div class="missionimage"></div>
-          <h4 class="missiontitle">Mission 2</h4>
-          <p class="missiondescription">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit
-          </p>
-        </div>
-        <div class="mission3 missionitem">
-          <div class="missionimage"></div>
-          <h4 class="missiontitle">Mission 3</h4>
-          <p class="missiondescription">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit
-          </p>
-        </div>
-        <div class="mission4 missionitem">
-          <div class="missionimage"></div>
-          <h4 class="missiontitle">Mission 4</h4>
-          <p class="missiondescription">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- footer -->
-   <footer>
-     <div class="footer_links">
-       <div class="about_links">
-         <ul class="footer_list">
-           <li>Contact us</li>
-           <li>About us</li>
-         </ul>
-       </div>
-       <div class="categories">
-         <ul class="footer_list">
-           <li>Fashion</li>
-           <li>Home</li>
-           <li>Electronics</li>
-           <li>Mobiles</li>
-         </ul>
-       </div>
-       <div class="help_links">
-         <ul class="footer_list">
-           <li>Returns</li>
-           <li>FAQ</li>
-         </ul>
-       </div>
-     </div>
-   
-     <div class="copyright_info">
-       <p>Copyright</p>
-     </div>
-   </footer>
     
+    <div id="loading" class="loading"></div>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="../javascript/firebase.js"></script>
+    <script src="../main.js"></script>
   </body>
 </html>

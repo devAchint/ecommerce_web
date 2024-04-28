@@ -18,7 +18,7 @@ function fetchProducts() {
                 productdiv.className = "product";
                 productdiv.innerHTML = `
                 <img src="${productdata.image}"></img>
-                <p>${productdata.name}</p>
+                <p class="truncate">${productdata.name}</p>
                 <p class="price">₹${productdata.price}</p>
             `;
                 productscontainer.appendChild(productdiv);

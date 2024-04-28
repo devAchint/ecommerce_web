@@ -1,4 +1,5 @@
-.categories_container {
+.categories_container,
+.orderscontainer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background-color: white;
@@ -6,10 +7,12 @@
     padding: 20px;
 }
 
-.category {
+.category,
+.order {
     padding: 15px;
     text-align: center;
 }
+
 
 .category img {
     max-width: 100%;

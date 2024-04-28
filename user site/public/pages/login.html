@@ -40,7 +40,7 @@
             .then((userCredential) => {
               var user = userCredential.user;
               localStorage.setItem('isLoggedIn', 'true');
-              alert("login success");
+              window.location.href = 'homepage.html';
             })
             .catch((error) => {
               var errorCode = error.code;

@@ -7,7 +7,6 @@ fetchCategories();
 function fetchSliders() {
     const sliderContainer = document.getElementById("sliderContainer");
     const dbRef = firebase.database().ref("sliders");
-    let isFirstItem = true;
     dbRef
         .once("value")
         .then((snapshot) => {
@@ -15,11 +14,6 @@ function fetchSliders() {
                 const sliderdata = category.val();
                 const sliderdiv = document.createElement("div");
                 sliderdiv.className = "carousel-item";
-                if (isFirstItem) {
-                    sliderdiv.classList.add("active");
-                    isFirstItem = false;
-                }
-
                 sliderdiv.innerHTML = `
                 <img src="${sliderdata.image}"></img>
             `;
@@ -70,7 +64,7 @@ function fetchBestSellers() {
                     productdiv.className = "product";
                     productdiv.innerHTML = `
                   <img src="${productdata.image}"></img>
-                  <p>${productdata.name}</p>
+                  <p class="truncate">${productdata.name}</p>
                   <p class="price">₹${productdata.price}</p>
                 `;
                     bestsellercontainer.appendChild(productdiv);
@@ -96,9 +90,10 @@ function fetchFeatured() {
                 if (productdata.featured === "true") {
                     const productdiv = document.createElement("div");
                     productdiv.className = "product";
+
                     productdiv.innerHTML = `
                   <img src="${productdata.image}"></img>
-                  <p>${productdata.name}</p>
+                  <p class="truncate">${productdata.name}</p>
                   <p class="price">₹${productdata.price}</p>
                 `;
                     featuredcontainer.appendChild(productdiv);
@@ -114,6 +109,7 @@ function fetchFeatured() {
         });
 }
 
+
 function openProductPage(category) {
     const destinationURL = `product_list.html?category=${encodeURIComponent(
         category
@@ -128,23 +124,8 @@ function openProductDetail(productkey) {
     window.location.href = destinationURL;
 }
 
-function goToProfile() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
 
-    if (isLoggedIn) {
-        window.location.href = "profile.html";
-    } else {
-        window.location.href = "login.html";
-    }
-}
 
-function showMenu() {
-    let submenu = document.getElementById("subMenu");
-    submenu.classList.toggle("open-menu");
-}
-
-document.getElementById("profile").onclick = showMenu;
-document.getElementById("logOut").onclick = logout;
 
 function showLoading() {
     document.getElementById("loading").style.display = "block";
@@ -156,13 +137,3 @@ function hideLoading() {
     document.getElementById("loading").style.display = "none";
 }
 
-function logout() {
-    firebase.auth().signOut()
-        .then(function () {
-            localStorage.setItem('isLoggedIn', 'false');
-            alert("logout success");
-        })
-        .catch(function (error) {
-            alert(error);
-        });
-}

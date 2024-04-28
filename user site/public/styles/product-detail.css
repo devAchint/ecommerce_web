@@ -1,63 +1,51 @@
-
-.loading {
-    display: none;
-    border: 4px solid #f3f3f3; /* Light grey */
-    border-top: 4px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-
-.product-container{
+.product-container {
     display: flex;
     background-color: white;
-    max-height: 0;
+    height: 0;
     overflow: hidden;
 }
 
-.product-container.load{
-    max-height: calc(100vh - 60px);
+.product-container.load {
+    height: calc(100vh - 60px);
 }
 
-.product-image{
+.product-image {
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40%;
 }
-.product-image img{
-   width: 300px;
-   height: auto;
+
+.product-image img {
+    width: 300px;
+    height: auto;
 }
 
-.product-details{
+.product-details {
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 50px 0;
 }
-.product-details h2{
+
+.product-details h2 {
     font-weight: 200;
     font-size: large;
     margin-bottom: 20px;
 }
-.product-details h3{
+
+.product-details h3 {
     font-size: large;
     margin-bottom: 20px;
     color: black;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
 }
 
 button {
@@ -73,7 +61,42 @@ button {
     margin: 8px 0;
 }
 
-.addtocart{
-    background: green;
+.quantity-dialog {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    width: 120px;
 }
 
+.quantity-button {
+    background-color: #f0f0f0;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-input {
+    border: 1px solid #ccc;
+    font-size: 16px;
+    padding: 5px 10px;
+    text-align: center;
+    width: 50px;
+    border: none;
+    user-select: none;
+    outline: none;
+}
+
+.quantity-button:hover {
+    background-color: #e0e0e0;
+}
+
+.minus {
+    border-radius: 5px 0 0 5px;
+}
+
+.plus {
+    border-radius: 0 5px 5px 0;
+}
