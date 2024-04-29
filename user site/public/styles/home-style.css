@@ -2,7 +2,7 @@
 .slidercontainer{
   position: relative;
   max-width: 100%;
-  height: 400px;
+ 
   overflow: hidden;
 }
 .carousel-item img{
@@ -49,6 +49,16 @@
   padding: 20px;
 }
 
+@media screen and (max-width: 600px) {
+  .categories,
+  .bestsellers,
+  .featured {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5px;
+    gap: 5px;
+  }
+}
+
 .category,
 .product {
   padding: 15px;
@@ -62,8 +72,8 @@
 
 .category img,
 .product img {
-  max-width: 100%;
   height: 150px;
+  overflow: hidden;
   border-radius: 8px;
 }
 

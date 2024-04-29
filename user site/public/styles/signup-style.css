@@ -15,12 +15,18 @@ body {
 
 .signup-form {
     text-align: center;
-    min-width: 400px;
+    width: 400px;
     margin: auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+    .signup-form {
+        width: 80%;
+    }
 }
 
 .formcontainer {

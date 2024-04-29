@@ -7,12 +7,18 @@
 
 .formcontainer {
     align-self: center;
-    min-width: 400px;
+    width: 400px;
     margin: auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+    .formcontainer {
+      width: 80%;
+    }
 }
 
 .formcontainer {
@@ -29,7 +35,7 @@
     flex-direction: column;
 }
 
-label {
+.contact-label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;

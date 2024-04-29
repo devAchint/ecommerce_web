@@ -39,10 +39,18 @@
   text-align: start;
 }
 .product img {
-  max-width: 100%;
   height: 150px;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 600px) {
+  .products_container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5px;
+    gap: 5px;
+  }
+}
+
 
 .price{
   color: deepskyblue;

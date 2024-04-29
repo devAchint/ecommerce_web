@@ -30,6 +30,24 @@
     padding: 50px 0;
 }
 
+@media screen and (max-width: 600px) {
+    .product-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-image {
+        height: 40%;
+        width: auto;
+    }
+
+    .product-details {
+        height: 60%;
+        width: auto;
+        padding: 20px;
+    }
+}
+
 .product-details h2 {
     font-weight: 200;
     font-size: large;

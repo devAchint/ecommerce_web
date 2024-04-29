@@ -1,8 +1,8 @@
 checkLogin();
 function checkLogin() {
-  var login = document.getElementById("menu-login");
-  var logout = document.getElementById("menu-logOut");
-  var profile = document.getElementById("menu-profile");
+  var login = document.getElementById("nav-logIn");
+  var logout = document.getElementById("nav-logOut");
+  var profile = document.getElementById("profile");
 
 
   firebase.auth().onAuthStateChanged(function (user) {
@@ -23,7 +23,7 @@ function logout() {
   firebase.auth().signOut()
     .then(function () {
       localStorage.setItem('isLoggedIn', 'false');
-     window.location.href = 'homepage.html';
+      window.location.href = 'homepage.html';
     })
     .catch(function (error) {
       alert(error);
@@ -52,21 +52,21 @@ function showMenu() {
   submenu.classList.toggle("open-menu");
 }
 
-function goToAbout(){
+function goToAbout() {
   window.location.href = 'about.html';
 }
-function goToContact(){
+function goToContact() {
   window.location.href = 'contact.html';
 }
-function goToHome(){
+function goToHome() {
   window.location.href = 'homepage.html';
 }
 
-document.getElementById("profile").onclick = showMenu;
-document.getElementById("menu-login").onclick = openLogin;
+document.getElementById("profile").onclick = goToProfile;
+document.getElementById("nav-logIn").onclick = openLogin;
 document.getElementById("menu-profile").onclick = goToProfile;
 document.getElementById("menu-help").onclick = openContact;
-document.getElementById("menu-logOut").onclick = logout;
+document.getElementById("nav-logOut").onclick = logout;
 document.getElementById("home").onclick = goToHome;
 document.getElementById("contact").onclick = goToContact;
 document.getElementById("about").onclick = goToAbout;

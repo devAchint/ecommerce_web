@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WristWorld</title>
     <link rel="stylesheet" href="../styles/login-style.css" />
   </head>
   <body>
@@ -23,7 +23,7 @@
         <p>Don't have an account <a href="signup.html">Signup here</a></p>
       </div>
     </div>
-
+<div id="loading" class="loading"></div>
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
     <script src="../javascript/firebase.js"></script>
     <script>
@@ -34,15 +34,16 @@
         if (email === "" || password === "") {
           alert("Input is blank!");
         } else {
+          showLoading();
           firebase
             .auth()
             .signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
               var user = userCredential.user;
-              localStorage.setItem('isLoggedIn', 'true');
-              window.location.href = 'homepage.html';
+             getkey(user.email);
             })
             .catch((error) => {
+              hideLoading();
               var errorCode = error.code;
               var errorMessage = error.message;
               alert(errorMessage);
@@ -50,6 +51,40 @@
         }
       }
 
+      function getkey(emailToFind) {
+        const dbRef = firebase.database().ref("users");
+
+        dbRef
+          .orderByChild("email")
+          .equalTo(emailToFind)
+          .once("value")
+          .then((snapshot) => {
+            if (snapshot.exists()) {
+              snapshot.forEach((childSnapshot) => {
+                var userData = childSnapshot.val();
+                localStorage.setItem("isLoggedIn", "true");
+                localStorage.setItem("userkey", childSnapshot.key);
+                window.location.href = "homepage.html";
+                hideLoading();
+              });
+            } else {
+              hideLoading();
+             alert("User not found");
+            }
+          })
+          .catch((error) => {
+            hideLoading();
+           alert("Error fetching user:", error);
+          });
+      }
+     
+      function showLoading(){
+          document.getElementById("loading").style.display='block';
+      }
+      
+      function hideLoading(){
+          document.getElementById("loading").style.display='none';
+      }
       document.getElementById("submit").onclick = login;
     </script>
   </body>

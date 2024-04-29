@@ -40,6 +40,7 @@ function uploadUser(name, email, address) {
             alert("Signup Successful!");
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('userkey',userCredential.key);
+            window.location.href = 'homepage.html';
         })
         .catch((error) => {
             enableButton('submit');

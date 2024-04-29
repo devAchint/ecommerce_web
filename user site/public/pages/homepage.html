@@ -17,41 +17,38 @@
   </head>
   <body>
     <header>
-      <div class="mynavbar">
-        <div class="nav-logo">
+      <nav>
           <div class="logo">WristWorld</div>
-        </div>
-        <div class="nav_pages">
-          <ul class="header_list">
-            <li id="home" class="point">Home</li>
-            <li id="contact" class="point">Contact us</li>
-            <li id="about" class="point">About us</li>
+          <input type="checkbox" id="menu-click">
+          <label for="menu-click" class="menu-btn">
+              <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+              <li id="home" class="point">Home</li>
+              <li id="contact" class="point">Contact us</li>
+              <li id="about" class="point">About us</li>
+              <li class="point" id="profile">Profile</li>
+              <li class="point" id="nav-logIn">Log in</li>
+              <li class="point" id="nav-logOut">Log out</li>
+              
+              <div class="submenu-wrap" id="subMenu">
+                <div class="submenu">
+                  <div id="menu-profile" class="menu point">
+                    <h3 >Profile</h3>
+                  </div>
+                  <div id="menu-login" class="logIn menu point">
+                    <h3>Log in</h3>
+                  </div>
+                  <div id="menu-help" class="menu point">
+                    <h3 >Help</h3>
+                  </div>
+                  <div id="menu-logOut" class="logOut menu point">
+                    <h3>Logout</h3>
+                  </div>
+                </div>
+              </div>
           </ul>
-        </div>
-        <div class="nav_account">
-          <ul class="header_list">
-            <li class="point" id="profile">
-              <i class="fa-solid fa-user"></i>
-            </li>
-          </ul>
-          <div class="submenu-wrap" id="subMenu">
-            <div class="submenu">
-              <div id="menu-profile" class="menu point">
-                <h3 >Profile</h3>
-              </div>
-              <div id="menu-login" class="menu point">
-                <h3>Log in</h3>
-              </div>
-              <div id="menu-help" class="menu point">
-                <h3 >Help</h3>
-              </div>
-              <div id="menu-logOut" class="menu point">
-                <h3>Logout</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </nav>
     </header>
 
     <div class="mycontainer" id="mycontainer">
