@@ -1,76 +1,134 @@
 .maincontainer {
     display: flex;
     flex-direction: column;
-    background-color: white;
     height: 0;
     overflow: hidden;
 }
 
-
-@media screen and (max-width: 600px) {
-    .maincontainer {
-        display: flex;
-      flex-direction: row;
-    }
-
-    .first{
-        display: none;
-    }
+.profilecontainer {
+    background: rgba(1, 183, 244, 0.597);
+    padding: 24px;
+    margin: 24px;
+    border-radius: 24px;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.maincontainer.load{
-    height: calc(100vh - 60px);
+.detailcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.profile-text{
-    margin: 20px;
+.namecontainer h3 {
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
 }
 
-.container{
-    width: 100%;
-    text-align: center;
+.profileimagecontainer {
     display: flex;
 }
 
-.first{
-    width: 50%;
-}
-
-.second{
-    display: grid;
-    width: 50%;
-}
-
-.card {
+.profileimagecontainer {
     align-self: center;
-    justify-self: center;
-    background-color: lightblue;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    padding: 20px;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    border: solid 5px white;
+    display: flex;
 }
 
-.user-info {
-    text-align: center;
+.profileimagecontainer i {
+    align-self: center;
+    justify-content: center;
+    font-size: 120px;
+    color: white;
 }
 
-.user-info h2 {
-    margin-bottom: 5px;
-    color: #333;
+.span {
+    color: black;
+    font-weight: 600;
 }
 
-.user-info p {
-    color: #666;
-    margin-bottom: 15px;
+.othercontainer p {
+    color:rgba(0, 0, 0, 0.872);
 }
 
-.user-info a {
-    color: #007bff;
-    text-decoration: none;
+/* orders */
+.orderHead {
+    margin: 0 24px;
 }
 
-.user-info a:hover {
-    text-decoration: underline;
+.ordercontainer {
+    gap: 20px;
+    margin: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.order {
+    background:rgba(1, 183, 244, 0.597);
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    height: 140px;
+}
+
+.orderdetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.orderimage {
+    display: flex;
+}
+.order p{
+    color: rgba(0, 0, 0, 0.872);
+}
+.order img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 8px;
+    align-self: center;
+    justify-content: center;
+    background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .profilecontainer {
+       
+        height: 150px;
+        
+    }
+    .profileimagecontainer {
+        height: 140px;
+        width: 140px; 
+    }
+
+    .profileimagecontainer i {
+        
+        font-size: 80px;
+       
+    }
+    
+    .namecontainer h3 {
+        font-size: 32px;
+        
+    }
+    
+    .ordercontainer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.maincontainer.load {
+    height: auto;
 }

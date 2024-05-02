@@ -51,30 +51,33 @@
     </header>
 
     <div id="maincontainer" class="maincontainer">
-      <h1 class="profile-text">Profile</h1>
 
-      <div class="container">
-        <div class="first"></div>
-        <div class="second">
-          <div class="card">
-            <div class="user-info">
-              <h2 id="name"></h2>
-              <p>
-                Email: <a id="email" href="mailto:john@example.com">john@example.com</a>
-              </p>
-              <p id="address">
-             
-              </p>
-            </div>
+      <div class="profilecontainer">
+        <div class="detailcontainer">
+          <div class="namecontainer">
+            <h3 id="name"></h3>
+          </div>
+          <div class="othercontainer">
+            <p id="email"></p>
+            <p id="address"></p>
           </div>
         </div>
+        <div class="profileimagecontainer">
+          <i id="profileimage" class="fa-solid fa-user"></i>
+        </div>
       </div>
+
+      <h2 class="orderHead">Orders</h2>
+      <div id="ordercontainer" class="ordercontainer">
+
+      </div>
+
     </div>
 
     <div id="loading" class="loading"></div>
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
     <script src="../javascript/firebase.js"></script>
-    <script src="../javascript/profile.js"></script>
     <script src="../main.js"></script>
+    <script src="../javascript/profile.js"></script>
   </body>
 </html>

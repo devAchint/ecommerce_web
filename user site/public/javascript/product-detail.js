@@ -1,4 +1,5 @@
 const productkey = getQueryParam("productkey");
+var image;
 
 fetchProduct(productkey);
 document.getElementById("buyNow").onclick = buyNow;
@@ -50,7 +51,8 @@ function setProduct(data) {
     const img = document.getElementById("productimage");
     const title = document.getElementById("product-title");
     const price = document.getElementById("product-price");
-    img.src = data.image;
+    image = data.image;
+    img.src=image;
     title.innerText = data.name;
     price.innerText = "₹" + data.price;
     hideLoading();
@@ -84,7 +86,7 @@ function buyNow() {
                         const quantity = document.getElementById("quantity-text").innerHTML;
                         const price = document.getElementById("product-price").innerHTML.trim().replace('₹', '');
                         const totalPrice = parseInt(price) * quantity;
-                        placeOrder(userData.name, userData.email, userData.address, productName, productkey, quantity, totalPrice);
+                        placeOrder(userData.name, userData.email, userData.address, productName, productkey, quantity, totalPrice,image);
 
                     });
                 } else {
@@ -106,7 +108,7 @@ function buyNow() {
     }
 }
 
-function placeOrder(name, email, address, productName, productId, Quantity, TotalOrderPrice) {
+function placeOrder(name, email, address, productName, productId, Quantity, TotalOrderPrice,productimage) {
 
     const dbRef = firebase.database().ref("orders");
 
@@ -117,7 +119,8 @@ function placeOrder(name, email, address, productName, productId, Quantity, Tota
         productName: productName,
         productId: productId,
         quantity: Quantity,
-        TotalOrderPrice: TotalOrderPrice
+        TotalOrderPrice: TotalOrderPrice,
+        productimage:productimage
     }).then(() => {
         alert("Order placed successfully!");
     }).catch((error) => {
