@@ -1,3 +1,7 @@
+nav ul #about{
+  background-color: white;
+}
+
 .maincontainer {
   display: flex;
   flex-direction: column;

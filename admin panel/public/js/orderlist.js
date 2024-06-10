@@ -9,13 +9,13 @@ function fetchOrders() {
         const orderDiv = document.createElement("div");
         orderDiv.className = "order";
         orderDiv.innerHTML = `
-               <p>Name :${orderData.name}</p>
-                <p>Email :${orderData.email}</p>
-                <p>Address :${orderData.address}</p>
-                <p>Product name :${orderData.productName}</p>
-                <p>Product Id :${orderData.productId}</p>
-                <p>Quantity :${orderData.quantity}</p>
-                <p>TotalPrice :${orderData.TotalOrderPrice}</p>
+               <p>Name: ${orderData.name}</p>
+                <p>Email: ${orderData.email}</p>
+                <p>Address: ${orderData.address}</p>
+                <p>Product name: ${orderData.productName}</p>
+                <p>Product Id: ${orderData.productId}</p>
+                <p>Quantity: ${orderData.quantity}</p>
+                <p>TotalPrice: ${orderData.TotalOrderPrice}</p>
                 <button class="deleteBtn">Remove Order</button>
             `;
         orderscontainer.appendChild(orderDiv);

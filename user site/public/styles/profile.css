@@ -1,3 +1,7 @@
+nav ul #profile {
+    background-color: white;
+}
+
 .maincontainer {
     display: flex;
     flex-direction: column;
@@ -55,7 +59,7 @@
 }
 
 .othercontainer p {
-    color:rgba(0, 0, 0, 0.872);
+    color: rgba(0, 0, 0, 0.872);
 }
 
 /* orders */
@@ -71,7 +75,7 @@
 }
 
 .order {
-    background:rgba(1, 183, 244, 0.597);
+    background: rgba(1, 183, 244, 0.597);
     border-radius: 20px;
     padding: 15px;
     display: flex;
@@ -88,9 +92,11 @@
 .orderimage {
     display: flex;
 }
-.order p{
+
+.order p {
     color: rgba(0, 0, 0, 0.872);
 }
+
 .order img {
     width: 100px;
     height: 100px;
@@ -103,27 +109,28 @@
 
 @media screen and (max-width: 600px) {
     .profilecontainer {
-       
+
         height: 150px;
-        
+
     }
+
     .profileimagecontainer {
         height: 140px;
-        width: 140px; 
+        width: 140px;
     }
 
     .profileimagecontainer i {
-        
+
         font-size: 80px;
-       
+
     }
-    
+
     .namecontainer h3 {
         font-size: 32px;
-        
+
     }
-    
-    .ordercontainer{
+
+    .ordercontainer {
         display: flex;
         flex-direction: column;
     }

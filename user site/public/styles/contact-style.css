@@ -1,3 +1,7 @@
+nav ul #contact{
+    background-color: white;
+  }
+
 .maincontainer {
     display: flex;
     flex-direction: row;
