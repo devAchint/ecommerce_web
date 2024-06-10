@@ -32,7 +32,7 @@ function uploadUser(name, email, address) {
         .push({
             name: name,
             email: email,
-            address: address,
+            address: address
         })
         .then((userCredential) => {
             hideLoading();

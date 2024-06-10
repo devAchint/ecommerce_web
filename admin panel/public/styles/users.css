@@ -1,0 +1,16 @@
+.usercontainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: white;
+    gap: 20px;
+    padding: 20px;
+}
+
+.user {
+    padding: 15px;
+    text-align: start;
+}
+.user h4{
+    font-size: 16px;
+}
+

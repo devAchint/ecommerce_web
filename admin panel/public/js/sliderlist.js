@@ -1,4 +1,4 @@
-function fetchSliders() {
+function fetchUsers() {
   const sliderContainer = document.getElementById("slidercontainer");
   const dbRef = firebase.database().ref("sliders");
   dbRef
@@ -15,7 +15,7 @@ function fetchSliders() {
         sliderContainer.appendChild(sliderdiv);
         const deleteBtn = sliderdiv.querySelector(".deleteBtn");
         deleteBtn.onclick = () => {
-          deleteSlide(slide.key, sliderdiv);
+          deleteUser(slide.key, sliderdiv);
         };
       });
     })
@@ -24,7 +24,7 @@ function fetchSliders() {
     });
 }
 
-function deleteSlide(slidekey, slidediv) {
+function deleteUser(slidekey, slidediv) {
   const isLoggedIn = localStorage.getItem("isAdminLoggedIn");
 
   if (isLoggedIn) {
@@ -42,4 +42,4 @@ function deleteSlide(slidekey, slidediv) {
     alert("User is not logged in");
   }
 }
-fetchSliders();
+fetchUsers();
