@@ -28,7 +28,7 @@
     <script src="../javascript/firebase.js"></script>
     <script>
       function login() {
-        var email = document.getElementById("login-email").value;
+        var email = document.getElementById("login-email").value.toLowerCase();
         var password = document.getElementById("login-password").value;
 
         if (email === "" || password === "") {

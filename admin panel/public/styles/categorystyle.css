@@ -12,26 +12,24 @@ body {
     display: flex;
     height: 80px;
     align-items: center;
-    background-color: gainsboro;
+    background-color:  rgba(0, 191, 255, 0.78);
     justify-content: flex-start;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .navigations ul {
-    background-color: gainsboro;
     display: flex;
     list-style-type: none;
 }
 
 .navigations ul li {
-    background-color: gainsboro;
     padding: 8px;
     font-size: large;
 }
 
 .navigations ul li:hover{
-    background-color: deepskyblue;
+    background-color: rgba(255, 255, 255, 0.751);
     border-radius: 8px;
     padding: 8px;
     cursor: pointer;
