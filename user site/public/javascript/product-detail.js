@@ -51,10 +51,12 @@ function setProduct(data) {
     const img = document.getElementById("productimage");
     const title = document.getElementById("product-title");
     const price = document.getElementById("product-price");
+    const description = document.getElementById("product-description");
     image = data.image;
     img.src=image;
     title.innerText = data.name;
     price.innerText = "₹" + data.price;
+    description.innerText =  data.description;
     hideLoading();
 }
 
