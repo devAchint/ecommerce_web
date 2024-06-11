@@ -70,7 +70,7 @@ nav ul li:hover {
 #nav-logIn{
   display: none;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
 
 
   nav ul #profile {
@@ -106,6 +106,7 @@ nav ul li:hover {
   #menu-click:checked~ul {
     left: 0;
   }
+ 
 }
 
 /* .mynavbar {
@@ -244,7 +245,8 @@ footer {
 
 footer .links {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 100px;
   padding-left: 20px;
   padding-right: 20px;
   width: 50%;
@@ -286,5 +288,13 @@ footer .footer-logo {
 
   footer .footer-logo {
     display: none;
+  }
+
+  footer .links {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
   }
 }
