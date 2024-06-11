@@ -21,11 +21,18 @@ function uploadData(name, email, message) {
     }).then(() => {
         hideLoading();
         alert("Message Received successfully!");
+        emptyFields();
     }).catch((error) => {
         hideLoading();
         alert("Error uploading data:" + error);
     });
 }
+
+function emptyFields() {
+    document.getElementById("name").value="";
+    document.getElementById("email").value="";
+    document.getElementById("message").value="";
+  }
 
 document.getElementById("submit").onclick =uploadComplaint;
 
